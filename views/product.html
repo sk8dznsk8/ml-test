@@ -1,66 +1,182 @@
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 ie6"> <![endif]-->
+<!--[if IE 7]>	<html class="no-js  lt-ie10 lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8]>	<html class="no-js lt-ie10 lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>	<html class="no-js lt-ie10 ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
+    <meta charset="utf-8" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="cleartype" content="on">
+    <link rel="stylesheet" href="dist/ui/chico.min.css" />
+    <link rel="stylesheet" href="site.css" />
+    <style>
+        .demo-carousel .ch-carousel-item {
+            border: 1px solid #dedede;
+            border-radius: 5px;
+            text-align: center;
+            /*width: auto !important;*/
+        }
+
+        .demo-carousel img {
+            width: 47px;
+            height: 49px;
+            border: 1px solid;
+            margin-top:5px;
+        }
+
+        .ch-carousel-pages {
+            display: none;
+        }
+
+        .ch-carousel-disabled {
+            display: block;
+            opacity: 0.4;
+        }
+
+        .labelsContainer ul li, .selectsContainer ul li {
+            margin: 0 0 5px;
+        }
+
+        .myTabContainer {
+            margin: 5px;
+        }
+
+        .myTrap{
+            width: 50px;
+            height: 50px;
+            background: lightblue;
+            border-radius: 5px;
+            transform: perspective(5px) rotateX(2deg);
+            transform-origin: bottom;
+        }
+
+        .myTrap2 {
+            border-bottom: 30px solid red;
+            /*border-left: 50px solid transparent;*/
+            border-right: 15px solid transparent;
+            height: 0;
+            /*width: 100px;*/
+        }
+    </style>
     <title>ML Front-end Test</title>
 </head>
-<body>
-    <main role="main">
-        <div>
+<body style="float:left; border: 2px solid; margin: 20px;">
+    <main role="main" style="margin: 10px;">
+        <section>
+        <section style="border-bottom: 1px solid #ccc;">
+            <header>
+                <h1 style="font-size: 30px; line-height: 36px;">Ipad Mini Apple 16 Gb Wifi Led 7.9</h1>
+            </header>
             <section>
-                <header>
-                    <h1>Ipad Mini Apple 16 Gb Wifi Led 7.9</h1>
-                </header>
-                <section>
-                    <div id="productPictureContainer">
-                        <img src="/slide.png">
-                    </div>
-                    <form>
-                        <fieldset class="priceContainer">
-                            <legend>
-                                <strong>Preço</strong>
-                            </legend>
-                            <article class="ch-price">
-                                $ 4799
-                                <sup>99</sup>
-                            </article>
-                        </fieldset>
-                        <fieldset class="quantityContainer">
-                            <div>Quantity</div>
-                            <div>
-                                <select>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
-                            </div>
-                        </fieldset>
-                        <fieldset class="paymentsContainer">
-                            <div>Payments</div>
-                            <div>
-                                <select>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <div>
-                                <input type="submit" id="buyProduct" title="Buy" class="ch-btn" value="Buy">
-                            </div>
-                            <article>
+                <section id="leftPane" class="ch-box-lite" style="display:inline-block; padding: 0;">
+                    <fieldset id="productPictureContainer" style="padding: 5px;  width:253px; height:271px; text-align: center;">
+                        <img style="max-width:100%; max-height:100%;" src="/ipadmini.png">
+                    </fieldset>
+                </section>
+                <section id="rightPane" class="ch-box-container" style="display:inline-block; vertical-align: top; margin-left: 25px;">
+                    <form class="ch-form">
+                        <section>
+                            <fieldset class="priceContainer">
+                                <article class="ch-price" style="font-size: 22px;">
+                                    $ 4799
+                                    <sup>99</sup>
+                                </article>
+                            </fieldset>
+                            <fieldset class="labelsContainer" style="display: inline-block">
+                                <ul>
+                                    <li><span>Quantity</span></li>
+                                    <li><span>Payments</span></li>
+                                </ul>
+                            </fieldset>
+                            <fieldset class="selectsContainer"  style="display: inline-block">
+                                <ul>
+                                    <li>
+                                        <select id="quantitySelector">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <select id="paymentsSelector">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </section>
+                        <section style="margin-top: 10px;">
+                            <fieldset>
+                                <div>
+                                    <input type="submit" id="buyProduct" title="Buy" class="ch-btn" value="Buy">
+                                </div>
                                 <span>Mercado Libre isn't the owner of this product.</span>
-                            </article>
-                        </fieldset>
+                            </fieldset>
+                        </section>
                     </form>
-                    <div>
-                        <h1>More products like this</h1>
-                        <div id="carousel" class="ch-carousel">
-
+                    <div style="margin-top: 25px;">
+                        <h3>More products like this</h3>
+                        <div>
+                            <div class="demo-carousel ch-carousel" style="width: 320px;overflow: hidden; margin-left: -15px;">
+                                <ul>
+                                    <li><img src="ipadmini.png"></li>
+                                    <li><img src="ipadmini.png"></li>
+                                    <li><img src="ipadmini.png"></li>
+                                    <li><img src="ipadmini.png"></li>
+                                    <li><img src="ipadmini.png"></li>
+                                    <li><img src="ipadmini.png"></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </section>
+                </div>
             </section>
-        </div>
+        </section>
+        </section>
+        <section id="tabsArea">
+            <div class="tabs">
+                <div class="tab">
+                    <input type="radio" id="tab-1" name="tab-group-1">
+                    <label for="tab-1">Product description</label>
+                    <div class="content">
+                        <ul class="ch-list">
+                            <li><span>7.9-inch LED-backlit Multi-Touch Display; 1024-by-768 Resolution</span></li>
+                            <li><span>Apple iOS 6; Dual-Core A5 Chip 1GHZ</span></li>
+                            <li><span>5 MP iSight Camera; 1080p HD Video Recording</span></li>
+                            <li><span>Wi-Fi (802.11a/b/g/n); 16 GB Capacity</span></li>
+                            <li><span>Up to 10 Hours of Battery Life; 0.68 lbs</span></li>
+                        </ul>
+                    </div> 
+                </div>
+                <div class="tab">
+                    <input type="radio" id="tab-2" name="tab-group-1" checked>
+                    <label for="tab-2">Questions</label>
+                    <div class="content">
+                        <div class="myTabContainer" style="color: #3a87ad;">
+                            <p>Buyer</p>
+                        </div>
+                        <div class="ch-box-info myTabContainer">
+                            <p>Do you have this one in white?</p>
+                        </div>
+                        <div class="myTabContainer" style="color: #468847;">
+                            <p>Seller</p>
+                        </div>
+                        <div class="ch-box-ok myTabContainer">
+                            <p>No I don't, I only have black</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="/node_modules/tiny.js/dist/tiny.js"></script>
+    <script src="dist/ui/chico.js"></script>
+    <script src="/main.js"></script>
 </body>
 </html>
