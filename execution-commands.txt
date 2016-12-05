@@ -15,12 +15,16 @@ git config --global credential.helper wincred
 
 --Getting data from my git repository
 git clone https://github.com/sk8dnsk8/ml-front-end
+git clone https://github.com/sk8dznsk8/ml-test.git
 
 --Setting where to publish files
 git remote add origin https://github.com/sk8dznsk8/ml-front-end.git
+git remote add ml-origin https://github.com/sk8dznsk8/ml-test.git
 
 --Publishing files on master branch
 git push -u origin master
+
+git push -u ml-origin master
 
 --Getting data from my ML Chico repository (http://chico.mercadolibre.com/)
 git clone https://github.com/mercadolibre/chico.git
@@ -35,3 +39,11 @@ npm install gulp -g
 --https://github.com/npm/npm/issues/7528
 --http://stackoverflow.com/questions/22325031/npm-please-try-using-this-command-again-as-root-administrator
 npm install browser-sync -g
+
+npm install --save-dev gulp gulp-livereload gulp-notify gulp-nodemon gulp-minify-html gulp-minify-css gulp-uglify gulp-concat
+
+npm install gulp-sass --save-dev
+
+npm install --save-dev gulp-autoprefixer
+
+npm install gulp-plumber --save-dev
